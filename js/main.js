@@ -45,7 +45,7 @@ $(document).ready(function(){
 	var imgChild = $('.image_frame').children()
 
 
-	function killMeNow(){
+	function autoSlide(){
 		$('.image_frame img').fadeOut(300);
 		$('.image_frame img').eq(current).fadeIn(300);
 		$('li').removeClass('selected');
@@ -54,10 +54,10 @@ $(document).ready(function(){
 		if (current >= imgChild.length) {
 			current = 0;
 		};
-		setTimeout(killMeNow, 10000);
+		setTimeout(autoSlide, 10000);
 	};
 
-	setTimeout(killMeNow, 10000);
+	setTimeout(autoSlide, 10000);
 
 //---------------------------------
 
